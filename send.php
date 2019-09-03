@@ -1,19 +1,23 @@
-<?
-if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
-        $to = 'ivanigorolenyk@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
-        $subject = 'Обратный звонок'; //Загаловок сообщения
-        $message = '
-                <html>
-                    <head>
-                        <title>'.$subject.'</title>
-                    </head>
-                    <body>
-                        <p>Имя: '.$_POST['name'].'</p>
-                        <p>Телефон: '.$_POST['phone'].'</p>
-                    </body>
-                </html>'; //Текст нащего сообщения можно использовать HTML теги
-        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= "From: Отправитель <from@example.com>\r\n"; //Наименование и почта отправителя
-        mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+<?php
+if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
+  $to = 'ivanigorolenyk@gmail.com';
+  $subject = 'Callback';
+  $message = '
+        <html>
+            <head>
+                <title>Call me back</title>
+            </head>
+            <body>
+                <p><b>Name:</b> '.$_POST['call-name'].'</p>
+                <p><b>Phonenum:</b> '.$_POST['phone'].'</p>
+            </body>
+        </html>';
+  $headers  = "Content-type: text/html; charset=utf-8 \r\n";
+$headers .= "From: Site <info@mail.com>\r\n";
+mail($to, $subject, $message, $headers);
+
+  echo json_encode(array('status' => 'success'));
+} else {
+  echo json_encode(array('status' => 'error'));
 }
 ?>

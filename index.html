@@ -5,29 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Отправка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <form id="form" method="POST">
-        <input type="text" name="name" required="required"/>
-        <input type="text" name="phone" required="required"/>
-        <button type"button">Сохранить</button>
-       <!-- <input type="submit" value="Заказать звонок"/>-->
-    </form>
+      <form name="freeCall" method="post" class="popover-form" id="free-call-form">
+          <label for="name1">Name</label><span class="pull-right close">&times;</span><input placeholder="Name" name="call-name" type="text" id="name1" >
+          <label for="phone">Phonenumber</label><input name="phone" type="text" value="" placeholder="+375" id="phone" >
+          <input type="submit" value="Call me back" >
+      </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#form button').on('click', function () { //устанавливаем событие отправки для формы с id=form
-                var form_data = $(this).serialize(); //собераем все данные из формы
-                $.ajax({
-                type: 'POST', //Метод отправки
-                url: 'send.php', //путь до php фаила отправителя
-                data: form_data,
-                        success: function(data){ // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
-                        alert('все ок'); // пoкaжeм eё тeкст
-                        }
-                });
-        });
-    });
+<script type="text/javascript" src="formMail.js">
+
 </script>
 </body>
 </html>
