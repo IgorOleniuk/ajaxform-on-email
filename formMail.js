@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    $("#form").submit(function(e) {
-      e.preventDefault() //устанавливаем событие отправки для формы с id=form
+    $('#form button').on('click', function () {
+
                var formData = $(this).serialize(); //собераем все данные из формы
                $.ajax({
                type: 'POST', //Метод отправки
@@ -12,4 +12,3 @@ $(document).ready(function(){
                });
        });
    });
-  
