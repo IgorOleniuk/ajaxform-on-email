@@ -9,17 +9,17 @@
   <body>
     <div class="container">
       <h1>Отзыв о товаре</h1>
-      <form method="post" action="" id="form">
-        <input type="text" id="name" name="name" placeholder="Введите ваше имя" class="form-control col-md-4" required ><br>
-        <input type="phone" id="phone" name="phone" placeholder="Телефон" class="form-control col-md-4" required ><br>
-        <textarea name="message" id="message" placeholder="Ваше сообщения" class="form-control col-md-4" cols="10" rows="5"></textarea><br>
-        <button type="button" class="btn btn-success" id="sendMail">Отправить</button>
-      </form>
-   </div>
-   <br>
-   <div id="resultForm" class="container">
+      <form id="form">
+    <input type="text" name="name" required="required"/>
+    <input type="text" name="phone" required="required"/>
+    <input type="submit" value="Заказать звонок"/>
+    </form>
 
    </div>
+   <br>
+  <div id="post_form_success"></div>
+
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="formMail.js"></script>
   </body>
