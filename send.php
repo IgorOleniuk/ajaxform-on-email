@@ -1,15 +1,17 @@
 <?php
-if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
+if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")
+    &&(isset($_POST['message'])&&$_POST['message']!="")){
   $to = 'ivanigorolenyk@gmail.com';
-  $subject = 'Callback';
+  $subject = 'Запит на перезвон';
   $message = '
         <html>
             <head>
                 <title>Call me back</title>
             </head>
             <body>
-                <p><b>Name:</b> '.$_POST['call-name'].'</p>
-                <p><b>Phonenum:</b> '.$_POST['phone'].'</p>
+                <p><b>Имя:</b> '.$_POST['call-name'].'</p>
+                <p><b>Телефон:</b> '.$_POST['phone'].'</p>
+                <p><b>Сообщения:</b> '.$_POST['message'].'</p>
             </body>
         </html>';
   $headers  = "Content-type: text/html; charset=utf-8 \r\n";

@@ -1,48 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Отправка</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Отправка</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
-      <form name="freeCall" method="post" class="popover-form" id="free-call-form">
-          <label for="name1">Name</label><span class="pull-right close">&times;</span><input placeholder="Name" name="call-name" type="text" id="name1" >
-          <label for="phone">Phonenumber</label><input name="phone" type="text" value="" placeholder="+375" id="phone" >
-          <input type="submit" value="Call me back" >
-      </form>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="formMail.js">
-
-</script>
-</body>
-</html>
-<!--<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Отправка письма</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container">
-      <h1>Отзыв о товаре</h1>
-      <form id="form">
-    <input type="text" name="name" required="required"/>
-    <input type="text" name="phone" required="required"/>
-    <input type="submit" value="Заказать звонок"/>
+  <div class="container">
+    <h1>Заказать обратний звонок</h1>
+    <form name="freeCall" method="post" class="popover-form" id="free-call-form">
+      <input placeholder="Ваше имя" name="call-name" type="text" id="name1"
+             class="form-control col-md-4" required="required"><br>
+      <input name="phone" type="text" value="" placeholder="Телефон" id="phone"
+             class="form-control col-md-4" required="required"><br>
+      <textarea name="message" id="message" placeholder="Введите ваше сообщения"
+                class="form-control col-md-4"></textarea><br>
+      <input type="submit" value="Call me back" class="btn btn-success">
     </form>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="formMail.js">
 
-   </div>
-   <br>
-  <div id="post_form_success"></div>
+  </script>
+</body>
 
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="formMail.js"></script>
-  </body>
-</html>-->
+</html>
