@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     $("#form").submit(function() { //устанавливаем событие отправки для формы с id=form
             var form_data = $(this).serialize(); //собераем все данные из формы
             $.ajax({
@@ -10,4 +10,4 @@ $(document).ready(function(){
                    alert("Ваше сообщение отпрвлено!");
             });
     });
-});
+});*/

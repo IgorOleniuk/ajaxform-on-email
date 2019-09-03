@@ -1,5 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Отправка</title>
+</head>
+<body>
+    <form id="form" method="POST">
+        <input type="text" name="name" required="required"/>
+        <input type="text" name="phone" required="required"/>
+        <button type"button">Сохранить</button>
+       <!-- <input type="submit" value="Заказать звонок"/>-->
+    </form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#form button').on('click', function () { //устанавливаем событие отправки для формы с id=form
+                var form_data = $(this).serialize(); //собераем все данные из формы
+                $.ajax({
+                type: 'POST', //Метод отправки
+                url: 'send.php', //путь до php фаила отправителя
+                data: form_data,
+                        success: function(data){ // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
+                        alert('все ок'); // пoкaжeм eё тeкст
+                        }
+                });
+        });
+    });
+</script>
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Отправка письма</title>
@@ -23,4 +56,4 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="formMail.js"></script>
   </body>
-</html>
+</html>-->
