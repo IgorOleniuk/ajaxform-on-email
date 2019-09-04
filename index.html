@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Отправка</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Отправка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
 
-<body>
-  <div class="container">
-    <h1>Заказать обратний звонок</h1>
-    <form name="freeCall" method="post" class="popover-form" id="free-call-form">
-      <input placeholder="Ваше имя" name="call-name" type="text" id="name1"
-             class="form-control col-md-4" required="required"><br>
-      <input name="phone" type="text" value="" placeholder="Телефон" id="phone"
-             class="form-control col-md-4" required="required"><br>
-      <textarea name="message" id="message" placeholder="Введите ваше сообщения"
-                class="form-control col-md-4"></textarea><br>
-      <input type="submit" value="Call me back" class="btn btn-success">
-    </form>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="formMail.js">
+  <body>
+    <div class="container">
+      <h1>Заказать обратний звонок</h1>
+      <form name="freeCall" method="post" id="free-call-form">
+          <input placeholder="Ваше имя" name="call-name" type="text" id="name1"
+                 class="form-control col-md-4" required="required"><br>
+          <input name="phone" type="text" value="" placeholder="Телефон" id="phone"
+                 class="form-control col-md-4" required="required"><br>
+          <textarea name="message" id="message" placeholder="Введите ваше сообщения"
+                    class="form-control col-md-4"></textarea><br>
+          <input type="submit" value="Call me back" class="btn btn-success">
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/maskinput.js"></script>
+    <script type="text/javascript" src="formMail.js"></script>
+    <script>
+        $(document).ready(function() {
+           $("#phone").mask("+38(999) 99-99-999");
+        });
 
-  </script>
-</body>
+    </script>
+  </body>
 
 </html>

@@ -1,4 +1,3 @@
-
 $(function () {
   $("#free-call-form").submit(function (e) {
     e.preventDefault();
@@ -6,9 +5,9 @@ $(function () {
     $.ajax({
       type: "POST",
       url: "send.php",
-      dataType: "json", // Add datatype
+      dataType: "json",
       data: form_data
-    }).done(function (data) {
+    }).success(function (data) {
         console.log(data);
         alert("Success!");
     }).fail(function (data) {
