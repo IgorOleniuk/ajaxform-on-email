@@ -1,5 +1,6 @@
 <?php
-if((isset($_POST['call-name']))&&(isset($_POST['phone'])){
+if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")
+    &&(isset($_POST['message'])&&$_POST['message']!="")){
   $to = 'ivanigorolenyk@gmail.com';
   $subject = 'Запит на перезвон';
   $message = '
