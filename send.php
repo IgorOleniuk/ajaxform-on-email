@@ -17,8 +17,8 @@ if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
   $headers .= "From: Site <info@mail.com>\r\n";
   mail($to, $subject, $message, $headers);
 
-  //echo json_encode(array('status' => 'success'));
-} /*else {
+  echo json_encode(array('status' => 'success'));
+} else {
   echo json_encode(array('status' => 'error'));
-}*/
+}
 ?>
