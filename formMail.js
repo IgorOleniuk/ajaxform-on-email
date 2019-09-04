@@ -7,7 +7,7 @@ $(function () {
       url: "send.php",
       dataType: "json",
       data: form_data
-    }).done(function (data) {
+    }).success(function (data) {
         console.log(data);
         alert("Success!");
     }).fail(function (data) {
