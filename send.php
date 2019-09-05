@@ -13,8 +13,8 @@ if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
                 <p><b>Телефон:</b> '.$_POST['phone'].';</p>
                 <p><b>Сообщения:</b> '.$_POST['message'].';</p>
                 <p><b>IP адрес отправителя:</b> '.$ip.';</p>
-                <p><b>Странница отправки письма:</b> '<a href="http://1551255.oleniuki.web.hosting-test.net/ajaxform-on-email/">
-                   </a>';</p>
+                <p><b>Странница отправки письма:</b> <a href="http://1551255.oleniuki.web.hosting-test.net/ajaxform-on-email/">
+                   </a>;</p>
             </body>
         </html>';
   $headers  = "Content-type: text/html; charset=utf-8 \r\n";
