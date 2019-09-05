@@ -1,7 +1,6 @@
 <?php
 if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
   $ip = $_SERVER['REMOTE_ADDR'];
-  $link = <a href="http://1551255.oleniuki.web.hosting-test.net/ajaxform-on-email/"></a>
   $to = 'ivanigorolenyk@gmail.com';
   $subject = 'Запит на перезвон';
   $message = '
@@ -14,7 +13,8 @@ if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
                 <p><b>Телефон:</b> '.$_POST['phone'].';</p>
                 <p><b>Сообщения:</b> '.$_POST['message'].';</p>
                 <p><b>IP адрес отправителя:</b> '.$ip.';</p>
-                <p><b>Странница отправки письма:</b> .'$link'.;</p>
+                <p><b>Странница отправки письма:</b> <a href="http://1551255.oleniuki.web.hosting-test.net/ajaxform-on-email/">
+                Сайт с которого отправлено письомо</a> </p>
             </body>
         </html>';
   $headers  = "Content-type: text/html; charset=utf-8 \r\n";
