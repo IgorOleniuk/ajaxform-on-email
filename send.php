@@ -12,7 +12,7 @@ if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
                 <p><b>Имя:</b> '.$_POST['call-name'].'</p>
                 <p><b>Телефон:</b> '.$_POST['phone'].'</p>
                 <p><b>Сообщения:</b> '.$_POST['message'].'</p>
-                <p>'<font color='"Blue"'>"IP of sender: " .$ip</font>'</p>
+                <p><b>IP of sender:</b> '.$ip.'</p>
             </body>
         </html>';
   $headers  = "Content-type: text/html; charset=utf-8 \r\n";
