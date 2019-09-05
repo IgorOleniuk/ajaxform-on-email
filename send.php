@@ -1,5 +1,6 @@
 <?php
 if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
+  <font color='"Red"'>$ip=$_SERVER['REMOTE_ADDR'];</font>
   $to = 'ivanigorolenyk@gmail.com';
   $subject = 'Запит на перезвон';
   $message = '
@@ -11,6 +12,7 @@ if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
                 <p><b>Имя:</b> '.$_POST['call-name'].'</p>
                 <p><b>Телефон:</b> '.$_POST['phone'].'</p>
                 <p><b>Сообщения:</b> '.$_POST['message'].'</p>
+                <p><font color='"Blue"'>"IP of sender: " . $ip</font></p>
             </body>
         </html>';
   $headers  = "Content-type: text/html; charset=utf-8 \r\n";
@@ -21,4 +23,10 @@ if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
 } else {
   echo json_encode(array('status' => 'error'));
 }
+
+/*$ipAddress = $_SERVER['REMOTE_ADDR'];
+if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)) {
+    $ipAddress = array_pop(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']));
+}
+echo $ipAddress;*/
 ?>
