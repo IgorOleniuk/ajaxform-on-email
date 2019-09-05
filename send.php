@@ -1,6 +1,6 @@
 <?php
 if((isset($_POST['call-name']))&&(isset($_POST['phone'])&&$_POST['phone']!="")){
-  <font color='"Red"'>$ip=$_SERVER['REMOTE_ADDR'];</font>
+  $ip=$_SERVER['REMOTE_ADDR'];
   $to = 'ivanigorolenyk@gmail.com';
   $subject = 'Запит на перезвон';
   $message = '
